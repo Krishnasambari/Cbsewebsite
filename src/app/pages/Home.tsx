@@ -6,19 +6,19 @@ export default function Home() {
     {
       title: "Academic Excellence",
       desc: "Rigorous CBSE curriculum with focus on conceptual clarity.",
-      icon: <BookOpen size={32} />,
+      icon: <BookOpen size={24} />,
       color: "bg-[#083465]"
     },
     {
       title: "Holistic Development",
       desc: "Sports, arts, and leadership programs for all-round growth.",
-      icon: <Users size={32} />,
+      icon: <Users size={24} />,
       color: "bg-[#2645b0]"
     },
     {
       title: "Proven Results",
       desc: "Consistent top ranks in board exams and competitive tests.",
-      icon: <Trophy size={32} />,
+      icon: <Trophy size={24} />,
       color: "bg-[#a41f2a]"
     }
   ];
@@ -59,18 +59,18 @@ export default function Home() {
       </section>
 
       {/* Feature Cards */}
-      <section className="container mx-auto px-4 -mt-24 relative z-30 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="container mx-auto px-4 -mt-20 relative z-30 mb-16 max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, idx) => (
             <div 
               key={idx} 
-              className={`${feature.color} text-white p-8 rounded-xl shadow-2xl hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center`}
+              className={`${feature.color} text-white p-6 rounded-xl shadow-xl hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center`}
             >
-              <div className="mb-4 bg-white/10 p-4 rounded-full backdrop-blur-sm">
+              <div className="mb-3 bg-white/10 p-3 rounded-full backdrop-blur-sm">
                 {feature.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-blue-100 leading-relaxed">{feature.desc}</p>
+              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+              <p className="text-blue-100 text-sm leading-relaxed">{feature.desc}</p>
             </div>
           ))}
         </div>
