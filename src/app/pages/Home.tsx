@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Users, Trophy, GraduationCap, Calendar, Star, CheckCircle, Quote } from "lucide-react";
 
 export default function Home() {
@@ -25,35 +25,41 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Hero Section HOME PAGE SLIDE */}
+      <section className="relative h-screen w-full flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-black/50 z-10" />
-        <img 
-          src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-          alt="School Campus" 
+
+        <img
+          src="https://cbseassets.s3.ap-south-1.amazonaws.com/homepage.jpg"
+          alt="School Campus"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        
-        <div className="relative z-20 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
-            Shaping Minds,<br/>Building Futures
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light drop-shadow-md text-gray-100">
-            Sri Chaitanya Techno School - Where tradition meets innovation in a world-class learning environment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
-              to="/admissions" 
-              className="bg-[#a41f2a] hover:bg-[#8a1a23] text-white font-bold py-4 px-10 rounded-full transition-transform hover:scale-105 shadow-xl flex items-center gap-3 text-lg"
-            >
-              Apply Now <ArrowRight size={20} />
-            </Link>
-            <Link 
-              to="/contact" 
-              className="bg-white hover:bg-gray-100 text-[#083465] font-bold py-4 px-10 rounded-full transition-transform hover:scale-105 shadow-xl text-lg"
-            >
-              Schedule a Visit
-            </Link>
+
+        <div className="relative z-20 container mx-auto px-6 md:px-12 text-left text-white">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight drop-shadow-lg">
+              Shaping Minds,<br />Building Futures
+            </h1>
+
+            <p className="text-xl md:text-2xl mb-10 font-light drop-shadow-md text-gray-100">
+              Sri Chaitanya Techno School - Where tradition meets innovation in a world-class learning environment.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6">
+              <Link
+                to="/admissions"
+                className="bg-[#a41f2a] hover:bg-[#8a1a23] text-white font-bold py-4 px-10 rounded-full transition-transform hover:scale-105 shadow-xl flex items-center gap-3 text-lg w-fit"
+              >
+                Apply Now <ArrowRight size={20} />
+              </Link>
+
+              <Link
+                to="/contact"
+                className="bg-white hover:bg-gray-100 text-[#083465] font-bold py-4 px-10 rounded-full transition-transform hover:scale-105 shadow-xl text-lg w-fit"
+              >
+                Schedule a Visit
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -62,8 +68,8 @@ export default function Home() {
       <section className="container mx-auto px-4 -mt-20 relative z-30 mb-16 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`${feature.color} text-white p-6 rounded-xl shadow-xl hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center`}
             >
               <div className="mb-3 bg-white/10 p-3 rounded-full backdrop-blur-sm">
@@ -82,16 +88,16 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full z-0" />
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-yellow-100 rounded-full z-0" />
-            <img 
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-              alt="Students Learning" 
+            <img
+              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Students Learning"
               className="relative z-10 rounded-2xl shadow-2xl w-full h-[500px] object-cover"
             />
           </div>
           <div>
             <span className="text-[#a41f2a] font-bold tracking-widest uppercase text-sm mb-2 block">About Us</span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#083465] mb-6 leading-tight">
-              Nurturing Potential,<br/>Inspiring Excellence
+              Nurturing Potential,<br />Inspiring Excellence
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
               At Sri Chaitanya, we believe every child is unique. Our mission is to provide a transformative educational experience that empowers students with the knowledge, values, and skills needed to thrive in a global society.
@@ -136,10 +142,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {['Pre-Primary', 'Primary', 'Secondary', 'Senior Secondary'].map((level, idx) => (
             <div key={idx} className="group relative overflow-hidden rounded-xl h-64 shadow-lg cursor-pointer">
-              <img 
-                src={`https://source.unsplash.com/random/400x600?school,education,${idx}`} 
-                alt={level} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+              <img
+                src={`https://source.unsplash.com/random/400x600?school,education,${idx}`}
+                alt={level}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
                 }}
@@ -217,14 +223,14 @@ export default function Home() {
               View All <ArrowRight size={16} />
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group">
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={`https://source.unsplash.com/random/400x300?event,school,${i}`} 
-                    alt="Event" 
+                  <img
+                    src={`https://source.unsplash.com/random/400x300?event,school,${i}`}
+                    alt="Event"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
@@ -240,7 +246,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-8 text-center md:hidden">
             <Link to="/events" className="btn-secondary inline-flex items-center gap-2">
               View All Events <ArrowRight size={16} />

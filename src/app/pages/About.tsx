@@ -2,9 +2,9 @@ import { Shield, Target, Award } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 mt-10">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-blue-900 mb-4">About Our School</h1>
+        <h1 className="text-4xl font-bold text-blue-900 mb-4 ">About Our School</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Sri Chaitanya Techno School is dedicated to fostering academic excellence and holistic development in a nurturing environment.
         </p>
